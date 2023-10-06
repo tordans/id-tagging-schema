@@ -2,11 +2,13 @@
     "icon": "temaki-school",
     "locationSet": {
         "include": [
-            "us"
+            "de"
         ]
     },
     "terms": [
-        "primary school"
+        "secondary school",
+        "grade 12",
+        "grade 13"
     ],
     "geometry": [
         "area",
@@ -14,10 +16,10 @@
     ],
     "tags": {
         "amenity": "school",
-        "isced:level": "1"
+        "isced:level": "2;3"
     },
     "reference": {
         "key": "isced:level"
     },
-    "name": "Elementary School Grounds"
+    "name": "Secondary School Grounds (Grade 5-12/13)"
 }

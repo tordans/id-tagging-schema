@@ -1,0 +1,25 @@
+{
+    "icon": "temaki-school",
+    "locationSet": {
+        "include": [
+            "us",
+            "de"
+        ]
+    },
+    "terms": [
+        "junior high school",
+        "intermediate school"
+    ],
+    "geometry": [
+        "area",
+        "point"
+    ],
+    "tags": {
+        "amenity": "school",
+        "isced:level": "2"
+    },
+    "reference": {
+        "key": "isced:level"
+    },
+    "name": "Middle School Grounds"
+}

@@ -1,7 +1,8 @@
 {
     "locationSet": {
         "include": [
-            "us"
+            "us",
+            "de"
         ]
     },
     "key": "isced:level",

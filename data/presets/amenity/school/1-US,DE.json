@@ -2,12 +2,12 @@
     "icon": "temaki-school",
     "locationSet": {
         "include": [
-            "us"
+            "us",
+            "de"
         ]
     },
     "terms": [
-        "junior high school",
-        "intermediate school"
+        "primary school"
     ],
     "geometry": [
         "area",
@@ -15,10 +15,10 @@
     ],
     "tags": {
         "amenity": "school",
-        "isced:level": "2"
+        "isced:level": "1"
     },
     "reference": {
         "key": "isced:level"
     },
-    "name": "Middle School Grounds"
+    "name": "Elementary School Grounds"
 }

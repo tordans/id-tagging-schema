@@ -2,7 +2,7 @@
     "icon": "temaki-school",
     "fields": [
         "name",
-        "isced/level-US",
+        "isced/level-US,DE",
         "operator",
         "operator/type",
         "address",
