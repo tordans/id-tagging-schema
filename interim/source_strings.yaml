@@ -2805,8 +2805,8 @@ en:
         # interval=*
         label: Interval
         terms: '[translate with synonyms or related terms for ''Interval'', separated by commas]'
-      isced/level-US:
-        # isced:level=* | Local preset for countries "US"
+      isced/level-US,DE:
+        # isced:level=* | Local preset for countries "US", "DE"
         label: Type
         options:
           # isced:level=1
@@ -7100,16 +7100,21 @@ en:
         name: School Grounds
         # 'terms: academy,elementary school,middle school,high school'
         terms: <translate with synonyms or related terms for 'School Grounds', separated by commas>
-      amenity/school/1-US:
-        # amenity=school + isced:level=1 | Translate the primary name. Optionally, add equivalent synonyms on newlines in order of preference (press the Return key). | Local preset for countries "US"
+      amenity/school/1-US,DE:
+        # amenity=school + isced:level=1 | Translate the primary name. Optionally, add equivalent synonyms on newlines in order of preference (press the Return key). | Local preset for countries "US", "DE"
         name: Elementary School Grounds
         # 'terms: primary school'
         terms: <translate with synonyms or related terms for 'Elementary School Grounds', separated by commas>
-      amenity/school/2-US:
-        # amenity=school + isced:level=2 | Translate the primary name. Optionally, add equivalent synonyms on newlines in order of preference (press the Return key). | Local preset for countries "US"
+      amenity/school/2-US,DE:
+        # amenity=school + isced:level=2 | Translate the primary name. Optionally, add equivalent synonyms on newlines in order of preference (press the Return key). | Local preset for countries "US", "DE"
         name: Middle School Grounds
         # 'terms: junior high school,intermediate school'
         terms: <translate with synonyms or related terms for 'Middle School Grounds', separated by commas>
+      amenity/school/3-DE:
+        # amenity=school + isced:level=2;3 | Translate the primary name. Optionally, add equivalent synonyms on newlines in order of preference (press the Return key). | Local preset for countries "DE"
+        name: Secondary School Grounds (Grade 5-12/13)
+        # 'terms: secondary school,grade 12,grade 13'
+        terms: <translate with synonyms or related terms for 'Secondary School Grounds (Grade 5-12/13)', separated by commas>
       amenity/school/3-US:
         # amenity=school + isced:level=3 | Translate the primary name. Optionally, add equivalent synonyms on newlines in order of preference (press the Return key). | Local preset for countries "US"
         name: High School Grounds
