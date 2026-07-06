@@ -1,4 +1,4 @@
-name: Build
+name: Interim Build
 
 permissions:
   contents: write
