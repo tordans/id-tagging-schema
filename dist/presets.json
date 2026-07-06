@@ -2217,6 +2217,29 @@
             "value": "maxspeed"
         }
     },
+    "type/boundary/protected_area": {
+        "icon": "maki-park",
+        "fields": [
+            "name",
+            "protect_class",
+            "protection_title",
+            "operator"
+        ],
+        "moreFields": [
+            "gnis/feature_id-US"
+        ],
+        "geometry": [
+            "relation"
+        ],
+        "tags": {
+            "type": "boundary",
+            "boundary": "protected_area"
+        },
+        "reference": {
+            "key": "boundary",
+            "value": "protected_area"
+        }
+    },
     "type/boundary/administrative": {
         "icon": "iD-boundary",
         "fields": [
@@ -2266,6 +2289,9 @@
             "traffic_sign": "maxspeed"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "US",
                 "CA",
@@ -3275,7 +3301,8 @@
             "activity"
         ],
         "moreFields": [
-            "material"
+            "material",
+            "support"
         ],
         "geometry": [
             "point",
@@ -6834,6 +6861,7 @@
             "interval",
             "maxheight",
             "maxweight",
+            "maxweightrating",
             "maxwidth",
             "network",
             "oneway",
@@ -7261,7 +7289,7 @@
         "matchScore": 0.95
     },
     "railway/derail": {
-        "icon": "maki-roadblock",
+        "icon": "roentgen-rails_with_derailer",
         "geometry": [
             "vertex"
         ],
@@ -11674,7 +11702,8 @@
         ],
         "tags": {
             "natural": "peak"
-        }
+        },
+        "matchScore": 1.1
     },
     "natural/mud": {
         "icon": "fas-water",
@@ -13371,6 +13400,7 @@
         }
     },
     "man_made/groyne": {
+        "icon": "roentgen-breakwater",
         "fields": [
             "material",
             "seamark/type"
@@ -13601,8 +13631,7 @@
         "fields": [
             "operator",
             "building_area_yes",
-            "height",
-            "capacity"
+            "height"
         ],
         "moreFields": [
             "layer",
@@ -17757,6 +17786,9 @@
             "name",
             "residential"
         ],
+        "moreFields": [
+            "address"
+        ],
         "geometry": [
             "area"
         ],
@@ -18309,6 +18341,9 @@
             "operator",
             "address"
         ],
+        "moreFields": [
+            "{landuse/residential}"
+        ],
         "geometry": [
             "point",
             "area"
@@ -18331,6 +18366,9 @@
             "name",
             "operator",
             "address"
+        ],
+        "moreFields": [
+            "{landuse/residential}"
         ],
         "geometry": [
             "point",
@@ -19072,10 +19110,12 @@
             "name",
             "building_area_yes",
             "access_simple",
-            "start_date"
+            "start_date",
+            "{building}"
         ],
         "moreFields": [
-            "{historic}"
+            "{historic}",
+            "{building}"
         ],
         "geometry": [
             "point",
@@ -19134,7 +19174,8 @@
             "start_date"
         ],
         "moreFields": [
-            "{historic}"
+            "{historic}",
+            "address"
         ],
         "geometry": [
             "point",
@@ -19461,6 +19502,9 @@
             "highway": "trunk_link"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "ca",
                 "us"
@@ -19522,6 +19566,7 @@
             "maxspeed/advisory",
             "maxspeed/hgv",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "minspeed",
             "not/name",
@@ -19612,6 +19657,7 @@
             "flood_prone",
             "horse_scale",
             "maxweight_bridge",
+            "maxweightrating",
             "mtb/scale",
             "mtb/scale/imba",
             "mtb/scale/uphill",
@@ -19628,6 +19674,9 @@
     },
     "highway/toll_gantry": {
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "de"
             ]
@@ -19814,6 +19863,7 @@
             "maxheight",
             "maxspeed/advisory",
             "maxweight_bridge",
+            "maxweightrating",
             "smoothness",
             "trolley_wire"
         ],
@@ -19853,6 +19903,7 @@
             "maxlength",
             "maxspeed/advisory",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "oneway/bicycle",
             "parking/side/parking",
@@ -19974,6 +20025,7 @@
             "maxlength",
             "maxspeed/advisory",
             "maxweight",
+            "maxweightrating",
             "maxwidth",
             "not/name",
             "oneway/bicycle",
@@ -20008,9 +20060,6 @@
             "area"
         ],
         "tags": {
-            "highway": "raceway"
-        },
-        "addTags": {
             "highway": "raceway",
             "sport": "motor"
         }
@@ -20047,6 +20096,7 @@
             "maxlength",
             "maxspeed/advisory",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "oneway/bicycle",
             "parking/side/parking",
@@ -20064,6 +20114,9 @@
             "highway": "primary_link"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "ca",
                 "us"
@@ -20100,6 +20153,7 @@
             "maxlength",
             "maxspeed",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "oneway/bicycle",
             "ref_road_number",
@@ -20154,6 +20208,7 @@
             "maxspeed/advisory",
             "maxspeed/hgv",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "not/name",
             "oneway/bicycle",
@@ -20300,6 +20355,7 @@
             "maxlength",
             "maxspeed/advisory",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "ref_road_number",
             "smoothness",
@@ -20313,6 +20369,9 @@
             "highway": "motorway_link"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "ca",
                 "us"
@@ -20346,6 +20405,7 @@
             "maxlength",
             "maxspeed",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "ref_road_number",
             "smoothness",
@@ -20406,6 +20466,7 @@
             "maxspeed/advisory",
             "maxspeed/hgv",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "minspeed",
             "not/name",
@@ -20467,6 +20528,7 @@
             "bicycle_road",
             "cyclestreet-BE-NL",
             "cycleway",
+            "incline",
             "sidewalk",
             "flood_prone",
             "hazard_highway",
@@ -20476,6 +20538,7 @@
             "maxheight",
             "maxlength",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "oneway/bicycle",
             "parking/side/parking",
@@ -20651,7 +20714,7 @@
             "level_semi",
             "access_simple",
             "wheelchair",
-            "maxweight"
+            "maxweight_general"
         ],
         "moreFields": [
             "dog",
@@ -20812,6 +20875,7 @@
             "maxlength",
             "maxspeed/advisory",
             "maxweight_bridge",
+            "maxweightrating",
             "maxwidth",
             "trolley_wire"
         ],
@@ -20892,6 +20956,28 @@
         },
         "searchable": false,
         "name": "{traffic_sign}"
+    },
+    "highway/raceway_unspecific": {
+        "icon": "temaki-speedway_oval",
+        "fields": [
+            "name",
+            "oneway",
+            "surface",
+            "sport/sport_racing_motor",
+            "lit",
+            "width",
+            "lanes",
+            "structure"
+        ],
+        "geometry": [
+            "line",
+            "area"
+        ],
+        "tags": {
+            "highway": "raceway"
+        },
+        "name": "{highway/raceway}",
+        "searchable": false
     },
     "highway/bus_stop": {
         "icon": "temaki-bus",
@@ -21762,6 +21848,9 @@
     },
     "highway/cycleway/traffic_island_shared": {
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "fr",
                 "lt",
@@ -21851,6 +21940,9 @@
     },
     "highway/cycleway/bicycle_foot": {
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "fr",
                 "lt",
@@ -22011,6 +22103,9 @@
     },
     "highway/cycleway/crossing/bicycle_foot": {
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "fr",
                 "lt",
@@ -24580,7 +24675,7 @@
         }
     },
     "craft/beekeeper": {
-        "icon": "maki-farm",
+        "icon": "roentgen-bee",
         "geometry": [
             "point",
             "area"
@@ -25781,7 +25876,7 @@
         "matchScore": 0.5
     },
     "building/outbuilding": {
-        "icon": "maki-building",
+        "icon": "roentgen-apartments_1_story",
         "geometry": [
             "area"
         ],
@@ -26286,7 +26381,7 @@
         "matchScore": 0.5
     },
     "barrier/jersey_barrier": {
-        "icon": "maki-roadblock",
+        "icon": "roentgen-barrier_jersey",
         "fields": [
             "height",
             "material"
@@ -26391,7 +26486,7 @@
         }
     },
     "barrier/full-height_turnstile": {
-        "icon": "maki-roadblock",
+        "icon": "roentgen-full_height_turnstile",
         "fields": [
             "access"
         ],
@@ -26528,7 +26623,7 @@
         }
     },
     "barrier/bus_trap": {
-        "icon": "maki-roadblock",
+        "icon": "roentgen-bus_over_bus_trap",
         "fields": [
             "access"
         ],
@@ -27224,8 +27319,7 @@
         "fields": [
             "ref",
             "operator",
-            "access_simple",
-            "maxweight"
+            "access_simple"
         ],
         "moreFields": [
             "address",
@@ -27474,7 +27568,6 @@
     "amenity/trolley_bay": {
         "icon": "fas-shopping-cart",
         "fields": [
-            "capacity",
             "deposit/trolley",
             "payment_multi_fee"
         ],
@@ -27492,6 +27585,16 @@
         ],
         "tags": {
             "amenity": "trolley_bay"
+        }
+    },
+    "amenity/traffic_park": {
+        "icon": "maki-bicycle",
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "tags": {
+            "amenity": "traffic_park"
         }
     },
     "amenity/toy_library": {
@@ -28275,6 +28378,9 @@
             "amenity": "post_box"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "us"
             ]
@@ -29180,7 +29286,6 @@
             "address",
             "branch_brand",
             "brand",
-            "capacity",
             "covered",
             "email",
             "indoor",
@@ -30808,8 +30913,7 @@
             "{@templates/internet_access}"
         ],
         "moreFields": [
-            "{@templates/internet_access}",
-            "{amenity}"
+            "{@templates/internet_access}"
         ],
         "geometry": [
             "point",
@@ -30840,8 +30944,30 @@
             "value": "dog_excrement"
         }
     },
+    "amenity/vending_machine/water": {
+        "icon": "temaki-vending_cold_drink",
+        "fields": [
+            "vending",
+            "{amenity/vending_machine}"
+        ],
+        "moreFields": [
+            "{amenity/vending_machine}"
+        ],
+        "geometry": [
+            "point",
+            "vertex"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "water"
+        },
+        "reference": {
+            "key": "vending",
+            "value": "water"
+        }
+    },
     "amenity/vending_machine/sweets": {
-        "icon": "temaki-vending_machine",
+        "icon": "roentgen-vending_candy",
         "geometry": [
             "point",
             "vertex"
@@ -31041,7 +31167,7 @@
         "matchScore": 0.5
     },
     "amenity/vending_machine/food": {
-        "icon": "temaki-vending_machine",
+        "icon": "roentgen-vending_pack",
         "geometry": [
             "point",
             "vertex"
@@ -31059,6 +31185,28 @@
         "reference": {
             "key": "vending",
             "value": "food"
+        }
+    },
+    "amenity/vending_machine/flowers": {
+        "icon": "roentgen-vending_flower",
+        "fields": [
+            "vending",
+            "{amenity/vending_machine}"
+        ],
+        "moreFields": [
+            "{amenity/vending_machine}"
+        ],
+        "geometry": [
+            "point",
+            "vertex"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "flowers"
+        },
+        "reference": {
+            "key": "vending",
+            "value": "flowers"
         }
     },
     "amenity/vending_machine/feminine_hygiene": {
@@ -31329,7 +31477,7 @@
         }
     },
     "amenity/vending_machine/food/snacks": {
-        "icon": "temaki-vending_machine",
+        "icon": "roentgen-vending_pack",
         "geometry": [
             "point",
             "vertex"
@@ -32522,6 +32670,9 @@
             "value": "irish"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "ie"
             ]
@@ -32988,6 +33139,27 @@
             "value": "wings"
         }
     },
+    "amenity/fast_food/sushi": {
+        "icon": "temaki-temaki",
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "fields": [
+            "{amenity/fast_food}"
+        ],
+        "moreFields": [
+            "{amenity/fast_food}"
+        ],
+        "tags": {
+            "amenity": "fast_food",
+            "cuisine": "sushi"
+        },
+        "reference": {
+            "key": "cuisine",
+            "value": "sushi"
+        }
+    },
     "amenity/fast_food/sandwich": {
         "icon": "temaki-sandwich",
         "geometry": [
@@ -33091,6 +33263,27 @@
         "reference": {
             "key": "cuisine",
             "value": "juice"
+        }
+    },
+    "amenity/fast_food/indian": {
+        "icon": "maki-restaurant",
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "fields": [
+            "{amenity/fast_food}"
+        ],
+        "moreFields": [
+            "{amenity/fast_food}"
+        ],
+        "tags": {
+            "amenity": "fast_food",
+            "cuisine": "indian"
+        },
+        "reference": {
+            "key": "cuisine",
+            "value": "indian"
         }
     },
     "amenity/fast_food/hot_dog": {
@@ -34615,7 +34808,7 @@
             "ref",
             "operator",
             "surface",
-            "maxweight",
+            "maxweight_general",
             "lit"
         ],
         "moreFields": [
@@ -34708,7 +34901,7 @@
             "name",
             "oneway_yes",
             "aerialway/duration",
-            "maxweight",
+            "maxweight_general",
             "access_simple"
         ],
         "moreFields": [
@@ -34847,7 +35040,6 @@
         ],
         "fields": [
             "name",
-            "aerialway/capacity",
             "aerialway/duration"
         ],
         "moreFields": [
@@ -35081,6 +35273,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35105,6 +35300,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35127,6 +35325,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35148,6 +35349,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35169,6 +35373,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35188,6 +35395,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35210,6 +35420,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35232,6 +35445,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35251,6 +35467,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35271,6 +35490,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]
@@ -35291,6 +35513,9 @@
         },
         "searchable": false,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "Planet"
             ]

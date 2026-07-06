@@ -24,6 +24,157 @@ _Breaking developer changes, which may affect downstream projects or sites that 
 -->
 
 
+# 6.19.0
+##### 2026-Jul-06
+
+#### New Presets
+
+* Add preset for `amenity=traffic_park` ([#2066], thanks [@ashree2118])
+* Created separate preset for sushi fast foods ([#2323], thanks [@fibonacci-matrix])
+* Don't suggest sport=motor for `highway=raceway`, create dedicated preset for `highway=raceway` without specified sport ([#2367], thanks [@matkoniecz])
+* Add preset for `boundary=protected_area` ([#2244], thanks [@k-yle])
+* Added Indian Fast Food and expanded Indian Restaurant presets ([#2118], thanks [@Naveena11-cmd])
+* Flower vending machine (preset and `vending=` value) ([#2334], thanks [@fibonacci-matrix])
+* Drinking water vending machines ([#2322], thanks [@fibonacci-matrix])
+
+#### New and Changed Fields
+
+* `amenity=trolley_bay` - remove capacity field ([#2401], thanks [@matkoniecz])
+* remove capacity from `man_made=dovecote` ([#2402], thanks [@matkoniecz])
+* use different placeholder for capacity, more fitting for more presets ([#2397], thanks [@matkoniecz])
+* support Gunshot Detector ([#2275], thanks [@matkoniecz])
+* `typeCombo` -> `combo`, to prevent useless `=yes` values (more cases) ([#2410], thanks [@matkoniecz])
+* Add `maxweightrating` in France (in future may be tweaked to allow `maxweightrating=` outside France) ([#1986], thanks [@ashree2118])
+* `typeCombo` -> `combo`, to prevent useless `=yes` values ([#2369], thanks [@matkoniecz])
+* Add Planet include to exclude-only `locationSets` (temporary workaround) ([#2381], thanks [@nathanpixodeo])
+* remove `capacity=` from `amenity=give_box` as unclear and not used and not documented ([#2398], thanks [@matkoniecz])
+* code review changes for `protect_class` ([#2376], thanks [@k-yle])
+* `typeCombo` -> `combo` - fix `trade=yes` appearing when user tries to cancel editing ([#2362], thanks [@matkoniecz])
+* Clarify assumed no state for crossing islands ([#2324], thanks [@KTibow])
+* Add `cuisine=austrian` ([#2264], thanks [@cuatim])
+* Remove `aerialway/capacity` field from "Goods Aerialway" preset" (field was specified as people per hour) ([#2364], thanks [@Geo-2695])
+* Added translatable key for `vending=bottle_return` ([#2342], thanks [@fibonacci-matrix])
+* Flower vending machine (preset and `vending` value) ([#2334], thanks [@fibonacci-matrix])
+* Reordering `bridge_combo` option values according to taginfo count ([#2325], thanks [@BrianMacIntosh])
+
+#### Changed Presets
+
+* Add incline to `living_street` more fields ([#2421], thanks [@RudyTheDev])
+* add "bike rack" term to `amenity=bicycle_parking` ([#2371], thanks [@matkoniecz])
+* add `support` as moreField in `information=guidepost` ([#2390], thanks [@matkoniecz])
+* clarify that `railway=abandoned` must have visible remains, with "Visible Railway Track Remnants" as a new label ([#2329], thanks [@matkoniecz])
+* "plumbing" should find `craft=plumber` ([#2355], thanks [@matkoniecz])
+* add some obvious terms to `office=estate_agent` ([#2359], thanks [@matkoniecz])
+* add address as moreField to `landuse=residential`, restores address display for `landuse=residential` from NSI ([#2373], thanks [@matkoniecz])
+* add term to capacity field ([#2370], thanks [@matkoniecz])
+* use breakwater icon also for `man_made=groyne` ([#2365], thanks [@matkoniecz])
+* code review changes for `protect_class` ([#2376], thanks [@k-yle])
+* Make `shop=florist` match on "flowers" ([#2340], thanks [@matkoniecz])
+* Add "bike parts" as term to Bike Shop preset ([#2005], thanks [@matkoniecz])
+* new icon for `building=outbuilding` ([#2349], thanks [@matkoniecz])
+* reorder some entries as demanded by linter ([#2366], thanks [@matkoniecz])
+* Change addr: neighbourhood placeholder to English (US) spelling, change takeaway to takeout to use English (US) ([#2358], thanks [@mugdhachalla])
+* Change 'brewery' field label to title case (Sold Beer Brands) ([#2356], thanks [@BrianMacIntosh])
+* Implementing icons from Roentgen 0.16.0 ([#2353], thanks [@BrianMacIntosh])
+* Added Indian Fast Food and expanded Indian Restaurant presets ([#2118], thanks [@Naveena11-cmd])
+* Allow building fields for Manor and allow address field on Castle presets ([#2338], thanks [@tyrasd])
+* Replace missing icons: `temaki-pump-manual`, `roentgen-telescope-radio` ([#2335], thanks [@baltpeter])
+* Prioritize peak preset slightly over related presets for double-tagged features ([#2331], thanks [@tyrasd])
+
+#### Deprecated Tags
+
+* remove `levels` -> `building:levels` suggestion ([#2378], thanks [@joelkoen])
+[#2378]: https://github.com/openstreetmap/id-tagging-schema/pull/2378
+
+#### Bug Fixes
+
+* Add incline to `living_street` more fields ([#2421], thanks [@RudyTheDev])
+* `typeCombo` -> `combo`, to prevent useless =yes values (more cases) ([#2410], thanks [@matkoniecz])
+* `typeCombo` -> `combo`, to prevent useless =yes values ([#2369], thanks [@matkoniecz])
+* add address as `moreField` to `landuse=residential`, restores address display for `landuse=residential` from NSI ([#2373], thanks [@matkoniecz])
+* Don't suggest `sport=motor` for `highway=raceway`, create dedicated preset for `highway=raceway` without specified sport ([#2367], thanks [@matkoniecz])
+* Add Planet include to exclude-only `locationSets` (temporary workaround) ([#2381], thanks [@nathanpixodeo])
+* remove capacity= from amenity\_give box as unclear and not used and not documented ([#2398], thanks [@matkoniecz])
+* remove `levels` -> `building:levels` suggestion ([#2378], thanks [@joelkoen])
+* typeCombo -> combo - fix `trade=yes` appearing when user tries to cancel editing ([#2362], thanks [@matkoniecz])
+* Remove `aerialway/capacity` field from "Goods Aerialway" preset" (field was specified as people per hour) ([#2364], thanks [@Geo-2695])
+
+
+#### Documentation and Other Changes
+
+* drop no longer needed `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24` ([#2420], thanks [@matkoniecz])
+* Tagging Schema Browser: Add compare view as alpha link to preview-comment ([#2413], thanks @tordans)
+* Netlify preview: Add CORS for iD Staging deploy ([#2412], thanks @tordans)
+* Record basic info what tagging schema is ([#2289], thanks [@matkoniecz])
+* Record new OSMF funding for work by matkoniecz (Mateusz Konieczny) ([#2348], thanks [@matkoniecz])
+* Netlify preview: Add CORS ([#2328], thanks @tordans)
+* Clarify on usage count necessary for tag to be established ([#2153], thanks [@matkoniecz])
+
+[#1986]: https://github.com/openstreetmap/id-tagging-schema/pull/1986
+[#2005]: https://github.com/openstreetmap/id-tagging-schema/pull/2005
+[#2066]: https://github.com/openstreetmap/id-tagging-schema/pull/2066
+[#2118]: https://github.com/openstreetmap/id-tagging-schema/pull/2118
+[#2118]: https://github.com/openstreetmap/id-tagging-schema/pull/2118
+[#2153]: https://github.com/openstreetmap/id-tagging-schema/pull/2153
+[#2244]: https://github.com/openstreetmap/id-tagging-schema/pull/2244
+[#2264]: https://github.com/openstreetmap/id-tagging-schema/pull/2264
+[#2275]: https://github.com/openstreetmap/id-tagging-schema/pull/2275
+[#2289]: https://github.com/openstreetmap/id-tagging-schema/pull/2289
+[#2322]: https://github.com/openstreetmap/id-tagging-schema/pull/2322
+[#2323]: https://github.com/openstreetmap/id-tagging-schema/pull/2323
+[#2324]: https://github.com/openstreetmap/id-tagging-schema/pull/2324
+[#2325]: https://github.com/openstreetmap/id-tagging-schema/pull/2325
+[#2328]: https://github.com/openstreetmap/id-tagging-schema/pull/2328
+[#2329]: https://github.com/openstreetmap/id-tagging-schema/pull/2329
+[#2331]: https://github.com/openstreetmap/id-tagging-schema/pull/2331
+[#2334]: https://github.com/openstreetmap/id-tagging-schema/pull/2334
+[#2335]: https://github.com/openstreetmap/id-tagging-schema/pull/2335
+[#2338]: https://github.com/openstreetmap/id-tagging-schema/pull/2338
+[#2340]: https://github.com/openstreetmap/id-tagging-schema/pull/2340
+[#2342]: https://github.com/openstreetmap/id-tagging-schema/pull/2342
+[#2348]: https://github.com/openstreetmap/id-tagging-schema/pull/2348
+[#2349]: https://github.com/openstreetmap/id-tagging-schema/pull/2349
+[#2353]: https://github.com/openstreetmap/id-tagging-schema/pull/2353
+[#2355]: https://github.com/openstreetmap/id-tagging-schema/pull/2355
+[#2356]: https://github.com/openstreetmap/id-tagging-schema/pull/2356
+[#2358]: https://github.com/openstreetmap/id-tagging-schema/pull/2358
+[#2359]: https://github.com/openstreetmap/id-tagging-schema/pull/2359
+[#2362]: https://github.com/openstreetmap/id-tagging-schema/pull/2362
+[#2362]: https://github.com/openstreetmap/id-tagging-schema/pull/2362
+[#2364]: https://github.com/openstreetmap/id-tagging-schema/pull/2364
+[#2365]: https://github.com/openstreetmap/id-tagging-schema/pull/2365
+[#2366]: https://github.com/openstreetmap/id-tagging-schema/pull/2366
+[#2367]: https://github.com/openstreetmap/id-tagging-schema/pull/2367
+[#2369]: https://github.com/openstreetmap/id-tagging-schema/pull/2369
+[#2369]: https://github.com/openstreetmap/id-tagging-schema/pull/2369
+[#2370]: https://github.com/openstreetmap/id-tagging-schema/pull/2370
+[#2371]: https://github.com/openstreetmap/id-tagging-schema/pull/2371
+[#2373]: https://github.com/openstreetmap/id-tagging-schema/pull/2373
+[#2373]: https://github.com/openstreetmap/id-tagging-schema/pull/2373
+[#2376]: https://github.com/openstreetmap/id-tagging-schema/pull/2376
+[#2378]: https://github.com/openstreetmap/id-tagging-schema/pull/2378
+[#2381]: https://github.com/openstreetmap/id-tagging-schema/pull/2381
+[#2390]: https://github.com/openstreetmap/id-tagging-schema/pull/2390
+[#2397]: https://github.com/openstreetmap/id-tagging-schema/pull/2397
+[#2398]: https://github.com/openstreetmap/id-tagging-schema/pull/2398
+[#2398]: https://github.com/openstreetmap/id-tagging-schema/pull/2398
+[#2401]: https://github.com/openstreetmap/id-tagging-schema/pull/2401
+[#2402]: https://github.com/openstreetmap/id-tagging-schema/pull/2402
+[#2410]: https://github.com/openstreetmap/id-tagging-schema/pull/2410
+[#2412]: https://github.com/openstreetmap/id-tagging-schema/pull/2412
+[#2413]: https://github.com/openstreetmap/id-tagging-schema/pull/2413
+[#2420]: https://github.com/openstreetmap/id-tagging-schema/pull/2420
+[#2421]: https://github.com/openstreetmap/id-tagging-schema/pull/2421
+
+[@fibonacci-matrix]: https://github.com/fibonacci-matrix
+[@Naveena11-cmd]: https://github.com/Naveena11-cmd
+[@mugdhachalla]: https://github.com/mugdhachalla
+[@joelkoen]: https://github.com/joelkoen
+[@nathanpixodeo]: https://github.com/nathanpixodeo
+[@KTibow]: https://github.com/KTibow
+[@baltpeter]: https://github.com/baltpeter
+
+
 # 6.18.0
 ##### 2026-Jun-12
 

@@ -970,6 +970,15 @@
         },
         {
             "key": "boundary",
+            "value": "protected_area",
+            "description": "🄿 Protected Area",
+            "object_types": [
+                "relation"
+            ],
+            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/park.svg"
+        },
+        {
+            "key": "boundary",
             "value": "administrative",
             "description": "🄿 Administrative Boundary",
             "object_types": [
@@ -3683,8 +3692,7 @@
             "description": "🄿 Railway Derailer",
             "object_types": [
                 "node"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/roadblock.svg"
+            ]
         },
         {
             "key": "railway",
@@ -3716,7 +3724,7 @@
         {
             "key": "railway",
             "value": "abandoned",
-            "description": "🄿 Abandoned Railway",
+            "description": "🄿 Visible Railway Track Remnants",
             "object_types": [
                 "way"
             ],
@@ -9156,9 +9164,9 @@
             "icon_url": "https://cdn.jsdelivr.net/gh/openstreetmap/iD@develop/svg/iD-sprite/presets/highway-residential.svg"
         },
         {
-            "key": "highway",
-            "value": "raceway",
-            "description": "🄿 Motorsport Racetrack",
+            "key": "sport",
+            "value": "motor",
+            "description": "🄿 Motorsport Racetrack, 🄵🅅 Sports: Motorsports",
             "object_types": [
                 "way",
                 "area"
@@ -9417,6 +9425,16 @@
                 "node"
             ],
             "icon_url": "https://cdn.jsdelivr.net/gh/openstreetmap/iD@develop/svg/fontawesome/fas-directions.svg"
+        },
+        {
+            "key": "highway",
+            "value": "raceway",
+            "description": "🄿 Motorsport Racetrack (unsearchable)",
+            "object_types": [
+                "way",
+                "area"
+            ],
+            "icon_url": "https://cdn.jsdelivr.net/gh/rapideditor/temaki/icons/speedway_oval.svg"
         },
         {
             "key": "highway",
@@ -10899,8 +10917,7 @@
             "object_types": [
                 "node",
                 "area"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/farm.svg"
+            ]
         },
         {
             "key": "craft",
@@ -11517,8 +11534,7 @@
             "description": "🄿 Outbuilding (unsearchable), 🄵🅅 Building: Outbuilding",
             "object_types": [
                 "area"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/building.svg"
+            ]
         },
         {
             "key": "building",
@@ -11768,8 +11784,7 @@
             "object_types": [
                 "node",
                 "way"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/roadblock.svg"
+            ]
         },
         {
             "key": "barrier",
@@ -11824,8 +11839,7 @@
             "description": "🄿 Full-Height Turnstile",
             "object_types": [
                 "node"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/roadblock.svg"
+            ]
         },
         {
             "key": "barrier",
@@ -11898,8 +11912,7 @@
             "description": "🄿 Bus Trap",
             "object_types": [
                 "node"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/roadblock.svg"
+            ]
         },
         {
             "key": "barrier",
@@ -12352,6 +12365,16 @@
                 "area"
             ],
             "icon_url": "https://cdn.jsdelivr.net/gh/openstreetmap/iD@develop/svg/fontawesome/fas-shopping-cart.svg"
+        },
+        {
+            "key": "amenity",
+            "value": "traffic_park",
+            "description": "🄿 Traffic Park",
+            "object_types": [
+                "node",
+                "area"
+            ],
+            "icon_url": "https://cdn.jsdelivr.net/gh/mapbox/maki/icons/bicycle.svg"
         },
         {
             "key": "amenity",
@@ -13697,12 +13720,20 @@
         },
         {
             "key": "vending",
+            "value": "water",
+            "description": "🄿 Drinking Water Vending Machine, 🄵🅅 Types of Goods: Drinking Water",
+            "object_types": [
+                "node"
+            ],
+            "icon_url": "https://cdn.jsdelivr.net/gh/rapideditor/temaki/icons/vending_cold_drink.svg"
+        },
+        {
+            "key": "vending",
             "value": "sweets",
             "description": "🄿 Candy Vending Machine, 🄵🅅 Types of Goods: Sweets",
             "object_types": [
                 "node"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/rapideditor/temaki/icons/vending_machine.svg"
+            ]
         },
         {
             "key": "vending",
@@ -13781,8 +13812,15 @@
             "description": "🄿 Food Vending Machine, 🄵🅅 Types of Goods: Food",
             "object_types": [
                 "node"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/rapideditor/temaki/icons/vending_machine.svg"
+            ]
+        },
+        {
+            "key": "vending",
+            "value": "flowers",
+            "description": "🄿 Flower Vending Machine, 🄵🅅 Types of Goods: Flowers",
+            "object_types": [
+                "node"
+            ]
         },
         {
             "key": "vending",
@@ -13877,7 +13915,7 @@
         {
             "key": "vending",
             "value": "bottle_return",
-            "description": "🄿 Bottle Return Machine",
+            "description": "🄿 Bottle Return Machine, 🄵🅅 Types of Goods: Bottle Return",
             "object_types": [
                 "node"
             ]
@@ -13897,8 +13935,7 @@
             "description": "🄿 Snack Vending Machine",
             "object_types": [
                 "node"
-            ],
-            "icon_url": "https://cdn.jsdelivr.net/gh/rapideditor/temaki/icons/vending_machine.svg"
+            ]
         },
         {
             "key": "townhall:type",
@@ -14172,7 +14209,7 @@
         {
             "key": "cuisine",
             "value": "sushi",
-            "description": "🄿 Sushi Restaurant, 🄵🅅 Cuisines: Sushi",
+            "description": "🄿 Sushi Restaurant, 🄿 Sushi Fast Food, 🄵🅅 Cuisines: Sushi",
             "object_types": [
                 "node",
                 "area"
@@ -14282,7 +14319,7 @@
         {
             "key": "cuisine",
             "value": "indian",
-            "description": "🄿 Indian Restaurant, 🄵🅅 Cuisines: Indian",
+            "description": "🄿 Indian Restaurant, 🄿 Indian Fast Food, 🄵🅅 Cuisines: Indian",
             "object_types": [
                 "node",
                 "area"
@@ -15628,11 +15665,6 @@
         },
         {
             "key": "vending",
-            "value": "water",
-            "description": "🄵🅅 Types of Goods: Drinking Water"
-        },
-        {
-            "key": "vending",
             "value": "milk",
             "description": "🄵🅅 Types of Goods: Milk"
         },
@@ -16096,7 +16128,7 @@
         },
         {
             "key": "takeaway",
-            "description": "🄵 Takeaway"
+            "description": "🄵 Takeout"
         },
         {
             "key": "tactile_paving",
@@ -16508,11 +16540,6 @@
             "key": "sport",
             "value": "golf",
             "description": "🄵🅅 Sports: Golf"
-        },
-        {
-            "key": "sport",
-            "value": "motor",
-            "description": "🄵🅅 Sports: Motorsports"
         },
         {
             "key": "sport",
@@ -17462,6 +17489,49 @@
             "key": "pump",
             "value": "no",
             "description": "🄵🅅 Pump: None"
+        },
+        {
+            "key": "protection_title",
+            "description": "🄵 Protection Title"
+        },
+        {
+            "key": "protect_class",
+            "description": "🄵 IUCN Protected Area Management Category"
+        },
+        {
+            "key": "protect_class",
+            "value": "2",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 2: National Park"
+        },
+        {
+            "key": "protect_class",
+            "value": "3",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 3: Natural Monument or Feature"
+        },
+        {
+            "key": "protect_class",
+            "value": "4",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 4: Habitat/Species Management Area"
+        },
+        {
+            "key": "protect_class",
+            "value": "5",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 5: Protected Landscape/Seascape"
+        },
+        {
+            "key": "protect_class",
+            "value": "6",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 6: Protected area with sustainable use of natural resources"
+        },
+        {
+            "key": "protect_class",
+            "value": "1a",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 1a: Strict Nature Reserve"
+        },
+        {
+            "key": "protect_class",
+            "value": "1b",
+            "description": "🄵🅅 IUCN Protected Area Management Category: 1b: Wilderness Area"
         },
         {
             "key": "product",
@@ -18479,6 +18549,10 @@
         {
             "key": "maxwidth",
             "description": "🄵 Width Limit"
+        },
+        {
+            "key": "maxweightrating",
+            "description": "🄵 Limit of Rated Vehicle Weight"
         },
         {
             "key": "maxweight",
@@ -20351,6 +20425,11 @@
             "description": "🄵🅅 Cuisines: Udon"
         },
         {
+            "key": "cuisine",
+            "value": "austrian",
+            "description": "🄵🅅 Cuisines: Austrian"
+        },
+        {
             "key": "crossing",
             "description": "🄵 Type"
         },
@@ -20937,18 +21016,13 @@
         },
         {
             "key": "bridge",
+            "value": "viaduct",
+            "description": "🄵🅅 Type: Viaduct"
+        },
+        {
+            "key": "bridge",
             "value": "aqueduct",
             "description": "🄵🅅 Type: Aqueduct"
-        },
-        {
-            "key": "bridge",
-            "value": "cantilever",
-            "description": "🄵🅅 Type: Cantilever Bridge"
-        },
-        {
-            "key": "bridge",
-            "value": "covered",
-            "description": "🄵🅅 Type: Covered Bridge"
         },
         {
             "key": "bridge",
@@ -20962,17 +21036,22 @@
         },
         {
             "key": "bridge",
+            "value": "cantilever",
+            "description": "🄵🅅 Type: Cantilever Bridge"
+        },
+        {
+            "key": "bridge",
+            "value": "covered",
+            "description": "🄵🅅 Type: Covered Bridge"
+        },
+        {
+            "key": "bridge",
             "value": "trestle",
             "description": "🄵🅅 Type: Trestle Bridge"
         },
         {
-            "key": "bridge",
-            "value": "viaduct",
-            "description": "🄵🅅 Type: Viaduct"
-        },
-        {
             "key": "brewery",
-            "description": "🄵 Sold Beer brands"
+            "description": "🄵 Sold Beer Brands"
         },
         {
             "key": "brand",
@@ -22040,6 +22119,11 @@
             "key": "surveillance:type",
             "value": "guard",
             "description": "🄵🅅 Surveillance Type: Guard"
+        },
+        {
+            "key": "surveillance:type",
+            "value": "gunshot_detector",
+            "description": "🄵🅅 Surveillance Type: Gunshot Detector"
         },
         {
             "key": "surveillance:type",
@@ -23986,6 +24070,16 @@
         {
             "key": "crossing:island",
             "description": "🄵 Refuge Island"
+        },
+        {
+            "key": "crossing:island",
+            "value": "yes",
+            "description": "🄵🅅 Refuge Island: Yes"
+        },
+        {
+            "key": "crossing:island",
+            "value": "no",
+            "description": "🄵🅅 Refuge Island: No"
         },
         {
             "key": "crossing:bell",
@@ -26090,10 +26184,6 @@
         {
             "key": "LEVEL",
             "description": "🄳 (deprecated tag) ➜ level=*"
-        },
-        {
-            "key": "levels",
-            "description": "🄳 (deprecated tag) ➜ building:levels=*"
         },
         {
             "key": "man_made",

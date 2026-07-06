@@ -47,7 +47,7 @@
     },
     "wholesale": {
         "key": "wholesale",
-        "type": "typeCombo"
+        "type": "combo"
     },
     "wheelchair": {
         "key": "wheelchair",
@@ -175,6 +175,7 @@
             "sweets",
             "water",
             "newspapers",
+            "bottle_return",
             "condoms",
             "bread",
             "pizza",
@@ -185,6 +186,7 @@
             "ice_cubes",
             "eggs",
             "stamps",
+            "flowers",
             "electronics",
             "feminine_hygiene",
             "e-cigarettes"
@@ -229,7 +231,7 @@
     },
     "utility": {
         "key": "utility",
-        "type": "typeCombo",
+        "type": "combo",
         "options": [
             "gas",
             "oil",
@@ -357,7 +359,7 @@
     },
     "traffic_calming_road": {
         "key": "traffic_calming",
-        "type": "typeCombo",
+        "type": "combo",
         "stringsCrossReference": "{traffic_calming}",
         "iconsCrossReference": "{traffic_calming}"
     },
@@ -391,7 +393,7 @@
     },
     "trade": {
         "key": "trade",
-        "type": "typeCombo"
+        "type": "combo"
     },
     "tracktype": {
         "key": "tracktype",
@@ -412,7 +414,7 @@
     },
     "tomb": {
         "key": "tomb",
-        "type": "typeCombo",
+        "type": "combo",
         "options": [
             "columbarium",
             "crypt",
@@ -627,7 +629,7 @@
     },
     "substation_pipeline": {
         "key": "substation",
-        "type": "typeCombo",
+        "type": "combo",
         "autoSuggestions": false,
         "options": [
             "transmission",
@@ -644,7 +646,7 @@
     },
     "substation": {
         "key": "substation",
-        "type": "typeCombo",
+        "type": "combo",
         "autoSuggestions": false,
         "options": [
             "transmission",
@@ -1134,7 +1136,7 @@
     },
     "royal_cypher-GB": {
         "key": "royal_cypher",
-        "type": "typeCombo",
+        "type": "combo",
         "autoSuggestions": false,
         "customValues": false,
         "locationSet": {
@@ -1431,6 +1433,24 @@
             "no"
         ]
     },
+    "protection_title": {
+        "key": "protection_title",
+        "type": "text"
+    },
+    "protect_class": {
+        "key": "protect_class",
+        "type": "combo",
+        "autoSuggestions": false,
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "1a",
+            "1b"
+        ]
+    },
     "product": {
         "key": "product",
         "type": "semiCombo"
@@ -1508,7 +1528,7 @@
             "map": "fas-earth-africa",
             "maze": "roentgen-maze",
             "playhouse": "temaki-playhouse",
-            "pump": "temaki-pump-manual",
+            "pump": "temaki-well_pump_manual",
             "seesaw": "temaki-seesaw",
             "slide": "temaki-slide2",
             "splash_pad": "temaki-splash_pad",
@@ -2081,6 +2101,21 @@
         "type": "roadheight",
         "snake_case": false
     },
+    "maxweightrating": {
+        "key": "maxweightrating",
+        "type": "combo",
+        "snake_case": false,
+        "locationSet": {
+            "include": [
+                "fr"
+            ]
+        }
+    },
+    "maxweight_general": {
+        "key": "maxweight",
+        "type": "combo",
+        "snake_case": false
+    },
     "maxweight_bridge": {
         "key": "maxweight",
         "type": "combo",
@@ -2089,12 +2124,28 @@
         "prerequisiteTag": {
             "key": "bridge",
             "valueNot": "no"
+        },
+        "locationSet": {
+            "include": [
+                "Planet"
+            ],
+            "exclude": [
+                "fr"
+            ]
         }
     },
     "maxweight": {
         "key": "maxweight",
         "type": "combo",
-        "snake_case": false
+        "snake_case": false,
+        "locationSet": {
+            "include": [
+                "Planet"
+            ],
+            "exclude": [
+                "fr"
+            ]
+        }
     },
     "maxstay": {
         "key": "maxstay",
@@ -2196,7 +2247,7 @@
     },
     "map_type": {
         "key": "map_type",
-        "type": "typeCombo",
+        "type": "combo",
         "autoSuggestions": false,
         "customValues": false,
         "options": [
@@ -3120,7 +3171,7 @@
     },
     "door_type": {
         "key": "door",
-        "type": "typeCombo"
+        "type": "combo"
     },
     "door": {
         "key": "door",
@@ -3571,7 +3622,8 @@
             "hawaiian",
             "brunch",
             "udon",
-            "ukrainian"
+            "ukrainian",
+            "austrian"
         ]
     },
     "crossing_raised": {
@@ -4072,14 +4124,14 @@
         "key": "bridge",
         "type": "combo",
         "options": [
-            "aqueduct",
+            "viaduct",
             "boardwalk",
-            "cantilever",
-            "covered",
+            "aqueduct",
             "low_water_crossing",
             "movable",
-            "trestle",
-            "viaduct"
+            "cantilever",
+            "covered",
+            "trestle"
         ]
     },
     "bridge": {
@@ -4106,7 +4158,7 @@
     },
     "boules": {
         "key": "boules",
-        "type": "typeCombo"
+        "type": "combo"
     },
     "bottle": {
         "key": "bottle",
@@ -4182,6 +4234,9 @@
         "key": "bicycle_road",
         "type": "defaultCheck",
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "BE",
                 "NL"
@@ -4765,7 +4820,7 @@
         "type": "combo",
         "icons": {
             "optical": "temaki-telescope",
-            "radio": "roentgen-telescope-radio"
+            "radio": "roentgen-telescope_radio"
         },
         "autoSuggestions": true,
         "customValues": true,
@@ -4825,6 +4880,7 @@
         "options": [
             "camera",
             "guard",
+            "gunshot_detector",
             "ALPR"
         ]
     },
@@ -5132,6 +5188,9 @@
         "key": "ref:vatin",
         "type": "identifier",
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "ai",
                 "ao",
@@ -5314,6 +5373,9 @@
     "post_box/type": {
         "key": "post_box:type",
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "gb"
             ]
@@ -5334,7 +5396,7 @@
                 "gb"
             ]
         },
-        "type": "typeCombo",
+        "type": "combo",
         "label": "{post_box/type}",
         "stringsCrossReference": "{post_box/type}",
         "options": [
@@ -6024,6 +6086,9 @@
         "autoSuggestions": true,
         "caseSensitive": true,
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "RU"
             ]
@@ -6261,6 +6326,9 @@
         "stringsCrossReference": "{crossing/markings}",
         "iconsCrossReference": "{crossing/markings}",
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "BG",
                 "DE",
@@ -6354,6 +6422,9 @@
             "ladder:paired": "iD-crossing_markings-ladder_paired"
         },
         "locationSet": {
+            "include": [
+                "Planet"
+            ],
             "exclude": [
                 "BG",
                 "DE",
@@ -6449,7 +6520,12 @@
     },
     "crossing/island": {
         "key": "crossing:island",
-        "type": "check"
+        "type": "check",
+        "options": [
+            "undefined",
+            "yes",
+            "no"
+        ]
     },
     "crossing/bell": {
         "key": "crossing:bell",

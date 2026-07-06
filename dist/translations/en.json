@@ -176,6 +176,7 @@
                         "sweets": "Sweets",
                         "water": "Drinking Water",
                         "newspapers": "Newspapers",
+                        "bottle_return": "Bottle Return",
                         "condoms": "Condoms",
                         "bread": "Bread",
                         "pizza": "Pizza",
@@ -186,6 +187,7 @@
                         "ice_cubes": "Ice Cubes",
                         "eggs": "Eggs",
                         "stamps": "Postage Stamps",
+                        "flowers": "Flowers",
                         "electronics": "Electronics",
                         "feminine_hygiene": "Feminine Hygiene Products",
                         "e-cigarettes": "E-Cigarettes"
@@ -435,12 +437,12 @@
                     "label": "Target"
                 },
                 "takeaway": {
-                    "label": "Takeaway",
-                    "terms": "take out,takeout",
+                    "label": "Takeout",
+                    "terms": "take out,takeaway,takeout",
                     "options": {
                         "yes": "Yes",
                         "no": "No",
-                        "only": "Takeaway Only"
+                        "only": "Takeout Only"
                     }
                 },
                 "tactile_paving": {
@@ -1133,6 +1135,21 @@
                         "no": "None"
                     }
                 },
+                "protection_title": {
+                    "label": "Protection Title"
+                },
+                "protect_class": {
+                    "label": "IUCN Protected Area Management Category",
+                    "options": {
+                        "2": "2: National Park",
+                        "3": "3: Natural Monument or Feature",
+                        "4": "4: Habitat/Species Management Area",
+                        "5": "5: Protected Landscape/Seascape",
+                        "6": "6: Protected area with sustainable use of natural resources",
+                        "1a": "1a: Strict Nature Reserve",
+                        "1b": "1b: Wilderness Area"
+                    }
+                },
                 "product": {
                     "label": "Products"
                 },
@@ -1663,6 +1680,12 @@
                 },
                 "maxwidth": {
                     "label": "Width Limit"
+                },
+                "maxweightrating": {
+                    "label": "Limit of Rated Vehicle Weight"
+                },
+                "maxweight_general": {
+                    "label": "Weight Limit"
                 },
                 "maxweight_bridge": {},
                 "maxweight": {
@@ -2782,7 +2805,8 @@
                         "hawaiian": "Hawaiian",
                         "brunch": "Brunch",
                         "udon": "Udon",
-                        "ukrainian": "Ukrainian"
+                        "ukrainian": "Ukrainian",
+                        "austrian": "Austrian"
                     }
                 },
                 "crossing_raised": {
@@ -3082,7 +3106,8 @@
                 },
                 "capacity": {
                     "label": "Capacity",
-                    "placeholder": "50, 100, 200..."
+                    "terms": "people",
+                    "placeholder": "2, 20, 200..."
                 },
                 "canoe": {
                     "label": "Canoe Access"
@@ -3212,14 +3237,14 @@
                 "bridge_combo": {
                     "label": "Type",
                     "options": {
-                        "aqueduct": "Aqueduct",
+                        "viaduct": "Viaduct",
                         "boardwalk": "Boardwalk",
-                        "cantilever": "Cantilever Bridge",
-                        "covered": "Covered Bridge",
+                        "aqueduct": "Aqueduct",
                         "low_water_crossing": "Low Water Crossing",
                         "movable": "Movable Bridge",
-                        "trestle": "Trestle Bridge",
-                        "viaduct": "Viaduct"
+                        "cantilever": "Cantilever Bridge",
+                        "covered": "Covered Bridge",
+                        "trestle": "Trestle Bridge"
                     }
                 },
                 "bridge": {
@@ -3227,7 +3252,7 @@
                     "placeholder": "Default"
                 },
                 "brewery": {
-                    "label": "Sold Beer brands",
+                    "label": "Sold Beer Brands",
                     "terms": "beer brand,beer dispensing,bottled beer,draft beer,on tap,tap beer"
                 },
                 "brand": {
@@ -3573,7 +3598,7 @@
                         "housename": "Housename",
                         "housenumber": "123",
                         "housenumber!jp": "Building No./Lot No.",
-                        "neighbourhood": "Neighbourhood",
+                        "neighbourhood": "Neighborhood",
                         "neighbourhood!jp": "Machi/Chōme/Aza/Koaza",
                         "place": "Place",
                         "postcode": "Postcode",
@@ -3867,6 +3892,7 @@
                     "options": {
                         "camera": "Camera",
                         "guard": "Guard",
+                        "gunshot_detector": "Gunshot Detector",
                         "ALPR": "Automatic License Plate Reader"
                     }
                 },
@@ -4783,7 +4809,12 @@
                     "label": "Lights"
                 },
                 "crossing/island": {
-                    "label": "Refuge Island"
+                    "label": "Refuge Island",
+                    "options": {
+                        "undefined": "Assumed to be No",
+                        "yes": "Yes",
+                        "no": "No"
+                    }
                 },
                 "crossing/bell": {
                     "label": "Bell"
@@ -5361,6 +5392,10 @@
                 "type/enforcement/maxspeed": {
                     "name": "Speed Limit Enforcement",
                     "terms": "maxspeed,radar,speed camera"
+                },
+                "type/boundary/protected_area": {
+                    "name": "Protected Area",
+                    "terms": "conservation,heritage,national park,nature,protection,wilderness,wildlife"
                 },
                 "type/boundary/administrative": {
                     "name": "Administrative Boundary"
@@ -6019,7 +6054,7 @@
                 },
                 "shop/florist": {
                     "name": "Florist",
-                    "terms": "bouquet,flower"
+                    "terms": "bouquet,flower,flowers"
                 },
                 "shop/flooring": {
                     "name": "Flooring Supply Shop",
@@ -6214,7 +6249,7 @@
                 "shop/bicycle": {
                     "name": "Bicycle Shop",
                     "aliases": "Bike Shop",
-                    "terms": "bicycle store,bike,bike store,hobby,repair,tricycle,unicycle"
+                    "terms": "bicycle store,bike,bike parts,bike store,hobby,repair,tricycle,unicycle"
                 },
                 "shop/beverages": {
                     "name": "Beverage Store",
@@ -6484,7 +6519,7 @@
                     "terms": "buffer,halt,stop"
                 },
                 "railway/abandoned": {
-                    "name": "Abandoned Railway",
+                    "name": "Visible Railway Track Remnants",
                     "terms": "abandoned railroad,former train tracks,train right-of-way"
                 },
                 "railway/tram_stop": {
@@ -7103,7 +7138,7 @@
                 },
                 "office/estate_agent": {
                     "name": "Real Estate Office",
-                    "terms": "real estate"
+                    "terms": "estate agent,real estate,real estate agent"
                 },
                 "office/engineer": {
                     "name": "Engineering Office",
@@ -8946,6 +8981,7 @@
                     "terms": "bridleway,equestrian,horse,trail"
                 },
                 "highway/traffic_sign": {},
+                "highway/raceway_unspecific": {},
                 "highway/bus_stop": {
                     "name": "Bus Stop"
                 },
@@ -9473,7 +9509,7 @@
                 },
                 "craft/plumber": {
                     "name": "Plumber",
-                    "terms": "pipe"
+                    "terms": "pipe,plumbing"
                 },
                 "craft/plasterer": {
                     "name": "Plasterer"
@@ -10152,6 +10188,10 @@
                     "name": "Cart Corral",
                     "terms": "carriage return,cart return,shopping cart,trolley bay"
                 },
+                "amenity/traffic_park": {
+                    "name": "Traffic Park",
+                    "terms": "bicycle safety centre,children's traffic park,learn to ride centre,traffic garden,traffic playground"
+                },
                 "amenity/toy_library": {
                     "name": "Toy Library",
                     "terms": "game,toy"
@@ -10601,7 +10641,7 @@
                 },
                 "amenity/bicycle_parking": {
                     "name": "Bicycle Parking",
-                    "terms": "bike,bike parking,cycle parking,cycling"
+                    "terms": "bike,bike parking,bike rack,bike stands,cycle parking,cycling"
                 },
                 "amenity/bench": {
                     "name": "Bench",
@@ -10674,6 +10714,10 @@
                     "name": "Dog Excrement Bin",
                     "terms": "bin,dog,garbage,litter,poo,rubbish,trash"
                 },
+                "amenity/vending_machine/water": {
+                    "name": "Drinking Water Vending Machine",
+                    "terms": "aqua,drinking water,potable water,water"
+                },
                 "amenity/vending_machine/sweets": {
                     "name": "Candy Vending Machine",
                     "terms": "gumball"
@@ -10714,6 +10758,10 @@
                 "amenity/vending_machine/food": {
                     "name": "Food Vending Machine",
                     "terms": "food"
+                },
+                "amenity/vending_machine/flowers": {
+                    "name": "Flower Vending Machine",
+                    "terms": "bouquet,flower"
                 },
                 "amenity/vending_machine/feminine_hygiene": {
                     "name": "Feminine Hygiene Vending Machine",
@@ -10929,7 +10977,7 @@
                 },
                 "amenity/restaurant/indian": {
                     "name": "Indian Restaurant",
-                    "terms": "bar,breakfast,curry,dine,dining,dinner,drive-in,eat,grill,lunch,table"
+                    "terms": "bar,biryani,breakfast,butter chicken,chaat,curry,dal makhni,dine,dining,dinner,dosa,eat,garlic naan,grill,lassi,lunch,paneer tikka,roti,samosa,thali"
                 },
                 "amenity/restaurant/hotpot": {
                     "name": "Hot Pot Restaurant",
@@ -11065,6 +11113,10 @@
                     "name": "Chicken Wings Fast Food",
                     "terms": "chicken,dine,dining,dinner,eat,lunch,table"
                 },
+                "amenity/fast_food/sushi": {
+                    "name": "Sushi Fast Food",
+                    "terms": "breakfast,canteen,dine,dining,dinner,drive thru,drive-in,drive-through,eat,food truck,lunch,restaurant,table,takeaway,takeout"
+                },
                 "amenity/fast_food/sandwich": {
                     "name": "Sandwich Fast Food",
                     "terms": "breakfast,cafe,café,deli,deli sandwich,dine,dining,dinner,drive-in,eat,grill,lunch,meat,table"
@@ -11084,6 +11136,10 @@
                 "amenity/fast_food/juice": {
                     "name": "Juice Fast Food",
                     "terms": "beverages,cafe,café,fruit drinks,juice bar,shakes,smoothies"
+                },
+                "amenity/fast_food/indian": {
+                    "name": "Indian Fast Food",
+                    "terms": "breakfast,chaat,dinner,dosa,eat,lassi,lunch,momos,paneer tikka,pani puri,pav bhaji,samosa,vada pav"
                 },
                 "amenity/fast_food/hot_dog": {
                     "name": "Hot Dog Fast Food",
