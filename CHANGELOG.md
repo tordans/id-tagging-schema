@@ -23,6 +23,23 @@ _Breaking developer changes, which may affect downstream projects or sites that 
 [@xxxx]: https://github.com/xxxx
 -->
 
+# 7.0.0
+##### 2026-Jul-08
+
+### Breaking changes
+
+* Update to schema-builder version 7, see [migration guide](https://github.com/ideditor/schema-builder/blob/v7/MIGRATION_GUIDE.md) ([#2255], thanks [@k-yle], [@matkoniecz] and others involved)
+> [!IMPORTANT]
+> see [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md) for more details about each breaking change.
+
+#### Other Changes
+
+* Use Temaki icons to playground presets ([#2293], thanks [@aidenmurph])
+
+[#2255]: https://github.com/openstreetmap/id-tagging-schema/pull/2255
+[#2293]: https://github.com/openstreetmap/id-tagging-schema/pull/2293
+[@aidenmurph]: https://github.com/aidenmurph
+
 
 # 6.19.2
 ##### 2026-Jul-08
