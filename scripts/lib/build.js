@@ -13,12 +13,12 @@ import fetchTranslations, { expandTStrings, sortObject } from './translations.js
 
 const require = createRequire(import.meta.url);
 
-const fieldSchema = require('../schemas/field.json');
-const presetSchema = require('../schemas/preset.json');
-const categorySchema = require('../schemas/preset_category.json');
-const defaultsSchema = require('../schemas/preset_defaults.json');
-const deprecatedSchema = require('../schemas/deprecated.json');
-const discardedSchema = require('../schemas/discarded.json');
+const fieldSchema = require('../../schemas/field.json');
+const presetSchema = require('../../schemas/preset.json');
+const categorySchema = require('../../schemas/preset_category.json');
+const defaultsSchema = require('../../schemas/preset_defaults.json');
+const deprecatedSchema = require('../../schemas/deprecated.json');
+const discardedSchema = require('../../schemas/discarded.json');
 
 let _currBuild = null;
 
@@ -841,7 +841,7 @@ const createTypeIdentifier = (string) => toPascalCase(toSafeIdentifier(string));
 /** @param {string} distDir */
 async function generateTypeDefs(distDir) {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  const inputFolder = path.join(__dirname, '../schemas');
+  const inputFolder = path.join(__dirname, '../../schemas');
 
   /**
    * Some generated files use plural names because they
@@ -883,7 +883,7 @@ async function generateTypeDefs(distDir) {
     const tsFile = await compile(fileContent, mainExport, {
       additionalProperties: false,
       ignoreMinAndMaxItems: true,
-      cwd: path.join(__dirname, '../schemas'),
+      cwd: path.join(__dirname, '../../schemas'),
 
       // ensure that the default export uses a consistent name
       customName: (schema, fallback) =>

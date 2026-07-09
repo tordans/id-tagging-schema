@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/ideditor/schema-builder/raw/main/schemas/discarded.json",
+    "$id": "https://github.com/openstreetmap/id-tagging-schema/raw/main/schemas/discarded.json",
     "title": "Discarded tags",
     "description": "Keys or tags to be deleted when editing features.",
     "type": "object",

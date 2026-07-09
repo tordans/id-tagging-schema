@@ -1,9 +1,9 @@
 import fs from 'fs';
 import shell from 'shelljs';
+import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
+import schemaBuilder from '../index.js';
 
-import schemaBuilder from '../lib/index.js';
-
-const _workspace = 'tests/workspace';
+const _workspace = 'workspace';
 
 beforeAll(() => {
   if (!fs.existsSync(_workspace)) {
