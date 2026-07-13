@@ -9,7 +9,7 @@ import marky from 'marky';
 import { LocationConflation } from '@rapideditor/location-conflation';
 import { createRequire } from 'module';
 import { compile, toSafeIdentifier } from 'json-schema-to-typescript-lite';
-import { isReference, dereferencedTranslatableContent, dereferenceUntranslatedContent } from './references.js';
+import { isReference, dereferencedTranslatableContent, dereferenceUntranslatedContent } from './references.ts';
 import fetchTranslations, { expandTStrings, sortObject } from './translations.js';
 
 const require = createRequire(import.meta.url);
